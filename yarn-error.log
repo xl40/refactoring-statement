@@ -19,7 +19,7 @@ Trace:
 
 npm manifest: 
   {
-    "name": "refactoring-statement",
+    "name": "refactoring-twoSum",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
