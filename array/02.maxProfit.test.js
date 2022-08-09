@@ -1,21 +1,3 @@
-function maxProfit(prices) {
-    let n = prices.length;
-    if (n <= 1) {
-        return 0;
-    }
-    let d;
-    let max = 0;
-    for (let i = 0; i < n; i++) {
-        d = prices[i] - prices[i - 1];
-        if (d > 0) {
-            max += d;
-        }
-    }
-    return max;
-
-}
-
-
 describe("maxProfit", () => {
     it('case 1', function () {
         const nums = [7, 1, 5, 3, 6, 4];
@@ -37,21 +19,30 @@ describe("maxProfit", () => {
 
     it('just test', function () {
         const prices = [7, 1, 5, 3, 6, 4];
-
-        let n = prices.length;
-        if (n <= 1) {
-            return 0;
-        }
-        let d;
-        let max = 0;
-        for (let i = 0; i < n; i++) {
-            d = prices[i] - prices[i - 1];
-            if (d > 0) {
-                max += d;
-            }
-        }
-        console.log(max);
-
+        console.log(maxProfit(prices));;
     });
-
 });
+
+function maxProfit(prices) {
+    // let n = prices.length;
+    // if (n <= 1) {
+    //     return 0;
+    // }
+    // let d;
+    // let max = 0;
+    // for (let i = 0; i < n; i++) {
+    //     d = prices[i] - prices[i - 1];
+    //     if (d > 0) {
+    //         max += d;
+    //     }
+    // }
+    // return max;
+
+    let profit = 0
+    let len = prices.length
+    for(let i = 1; i < len; ++i) {
+        profit += Math.max(0, prices[i] - prices[i - 1])
+    }
+
+    return profit
+}
