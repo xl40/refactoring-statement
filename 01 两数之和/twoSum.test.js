@@ -1,7 +1,7 @@
 const twoSum = require("./twoSum")
 
 describe("Statement", () => {
-    it('should align baseline', function () {
+    it('should return 1', function () {
         const invoice = [2, 7, 11, 15];
         const play = 9;
         const expected = [0,1];
