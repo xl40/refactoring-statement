@@ -24,4 +24,24 @@ describe("Statement", () => {
         const expected = 5;
         expect(minStartValue(nums)).toStrictEqual(expected)
     });
+
+    it('should just test', function () {
+        let nums = [1,-2,-3];
+        // const expected = 5;
+
+        let result = 1;
+        let sum = result;
+
+        for (let i = 0; i < nums.length; i++) {
+            sum += nums[i];
+            if (sum <= 0) {
+                result = result - sum + 1;
+                sum = 1;
+            }
+        }
+        console.log(result);
+
+    });
+
+
 });
