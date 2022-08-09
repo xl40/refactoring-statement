@@ -32,7 +32,7 @@ describe("removeDuplicates", () => {
         expect(removeDuplicates(nums)).toStrictEqual(expected)
     });
 
-    it('case 2', function () {
+    it('', function () {
         var a = 0;
         var sum = a++ + ++a + --a + ++a + a++ + a--;
         console.log(a);
