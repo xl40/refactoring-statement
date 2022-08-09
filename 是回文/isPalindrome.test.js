@@ -13,7 +13,7 @@ describe("Statement", () => {
         expect(isPalindrome(x)).toStrictEqual(expected)
     });
 
-    it('should return false', function () {
+    it('should return false whit "-121"', function () {
         const x = -121;
         const expected = false;
         expect(isPalindrome(x)).toStrictEqual(expected)
@@ -24,4 +24,28 @@ describe("Statement", () => {
         const expected = false;
         expect(isPalindrome(x)).toStrictEqual(expected)
     });
+
+
+    it('just test', function () {
+
+        let str = "-121";
+
+        console.log(str.charAt(str.length - 1));
+        console.log(str.charAt(0));
+
+        console.log(str.charAt(0) === str.charAt(str.length - 1));
+        console.log(abc(str));
+
+    })
+
+    function abc(str){
+        for (let i = 0, len = str.length; i < len; i++) {
+            console.log(str.charAt(i));
+            console.log(str.charAt(str.length - 1 - i));
+            if (str.charAt(i) !== str.charAt(str.length - 1 - i)){
+                return false;
+            }
+        }
+        return true;
+    }
 })
